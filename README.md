@@ -67,6 +67,6 @@
 #### (HTTP.DELETE - /api/users) allowed for ADMIN role.
 <hr>
 
-### (HTTP.GET - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
-### (HTTP.POST - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
-### (HTTP.PUT - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
+#### (HTTP.GET - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
+#### (HTTP.POST - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
+#### (HTTP.PUT - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
