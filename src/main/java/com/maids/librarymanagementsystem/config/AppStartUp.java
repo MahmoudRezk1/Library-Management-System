@@ -6,6 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author mahmoudrezk514@gmail.com
+ * @implNote class for initialize two users on running application process
+ */
 @Configuration
 @RequiredArgsConstructor
 public class AppStartUp implements CommandLineRunner {

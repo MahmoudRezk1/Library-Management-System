@@ -12,17 +12,32 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author mahmoudrezk514@gmail.com
+ * @implNote service class for patron api
+ */
 @Service
 @RequiredArgsConstructor
 public class PatronServiceImpl implements PatronService {
     private final PatronRepo patronRepo;
 
+    /**
+     * @implNote  method to retrieve all stored patrons
+     * and caching the retrieved data after calling
+     * @return List of patrons
+     */
     @Override
     @Cacheable(value = "getPatrons", key = "#root.methodName")
     public List<Patron> getPatrons() {
         return patronRepo.findAll();
     }
 
+    /**
+     * @implNote  method to retrieve patron with specific ID
+     * and caching the retrieved data after calling
+     * @param id represent the id number of patron
+     * @return patron object of the target patron
+     */
     @Override
     @Cacheable(value = "getPatronById", key = "#id")
     public Patron getPatronById(long id) {
@@ -33,6 +48,12 @@ public class PatronServiceImpl implements PatronService {
             throw new RecordNotFoundException("Patron with id: " + id + " not found");
     }
 
+    /**
+     * @implNote  method to insert patron to our system
+     * and clear the caching data after calling
+     * @param patron represent the object of target patron to store it
+     * @return patron object of the saved patron
+     */
     @Override
     @Transactional
     @CacheEvict(value = {"getPatrons","getPatronById"}, key = "#root.methodName", allEntries = true)
@@ -40,6 +61,12 @@ public class PatronServiceImpl implements PatronService {
         return patronRepo.save(patron);
     }
 
+    /**
+     * @implNote  method to update patron in our system
+     * and clear the caching data after calling
+     * @param patron represent the object of target patron to update it
+     * @return patron object of the updated patron
+     */
     @Override
     @Transactional
     @CacheEvict(value = {"getPatrons","getPatronById"}, key = "#root.methodName", allEntries = true)
@@ -59,6 +86,11 @@ public class PatronServiceImpl implements PatronService {
             throw new RecordNotFoundException("Patron with id: " + patron.getId() + " not found");
     }
 
+    /**
+     * @implNote  method to delete a patron from our system
+     * and clear the caching data after calling
+     * @param id represent the id of target patron to delete it
+     */
     @Override
     @Transactional
     @CacheEvict(value = {"getPatrons","getPatronById"}, key = "#id", allEntries = true)
