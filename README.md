@@ -92,3 +92,7 @@
 #### (HTTP.GET - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
 #### (HTTP.POST - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
 #### (HTTP.PUT - /api/borrow) allowed for ADMIN - LIBRARIAN roles.
+<hr>
+
+## Code explanation is above each method of code.
+## Refrences: Available upone requests.
