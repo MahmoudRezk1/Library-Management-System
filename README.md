@@ -11,6 +11,28 @@
 ##### each part of the library represented as an entity in system code 
 <hr>
 
+### Project Technologies:
+##### 1- java 17
+##### 2- Spring boot 3.2.5
+##### 3- Spring Web
+##### 4- Spring data JPA
+##### 5- spring Test
+##### 6- Spring Validation
+##### 7- Spring Security
+##### 8- Spring AOP
+##### 9- Spring Cach
+##### 10- Maven
+##### 11- MySQL for SQL DB.
+<hr>
+
+### How to run the project:
+##### 1- locate to project path.
+##### 2- Customize your configuration in application.yml file unde src/main/resources.
+##### 3- Run (mvn spring-boot:run).
+##### 4- To build jar file you can run command (mvn clean install) it will generate jar file under target folder after building.
+##### 5- To run the generated jar file you can use command (java -jar jar-file-name.jar).
+<hr>
+
 ### Important notes:
 ##### 1- To borrow a book we need at least 1 patron - 1 librarian - 1 system user - 1 book.
 ##### 2- Patron cannot borrow the same book before retrun it first.
