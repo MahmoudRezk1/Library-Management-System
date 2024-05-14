@@ -12,6 +12,16 @@
 <hr>
 
 ### Important notes:
-##### To borrow a book we need at least 1 patron - 1 librarian - 1 system user - 1 book
-##### Patron cannot borrow the same book before retrun it first
-##### 
+##### 1- To borrow a book we need at least 1 patron - 1 librarian - 1 system user - 1 book.
+##### 2- Patron cannot borrow the same book before retrun it first.
+##### 3- Borrowing period assumed to be 1 Month.
+##### 4- To save the shape of borrowing api url we assumed that there is one librarian with id 1 in DB but it can be modified to be choosen.
+##### 5- Status of the book represented in code by (Returned - Not Returned).
+
+### System Architecture:
+#### 1- Model layer which contains (Repository - Entity) : the layer that connect to DB.
+#### 2- Service layer: which contains the business logic of the System.
+#### 3- Controller layer: which handle the Http requests and responses.
+#### 4- Security components: which handle the authentication and the autherizations between each api and users.
+#### 5- Somer helper classes which handle: Exceptions - logging - configurations.
+
